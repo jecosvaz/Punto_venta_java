@@ -5,6 +5,8 @@
  */
 package punto_venta;
 
+import Ventanas.Altaproducto;
+
 /**
  *
  * @author Tecno
