@@ -77,7 +77,11 @@ public class Menu_de_opciones extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Btn_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ProductoActionPerformed
-        // TODO add your handling code here:
+       
+        Altaproducto verproducto = new Altaproducto();
+                verproducto.setVisible(true);
+                this.setVisible(false); 
+        
     }//GEN-LAST:event_Btn_ProductoActionPerformed
 
     /**
