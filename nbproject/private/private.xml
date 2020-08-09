@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Jecosvaz/Documents/NetBeansProjects/Punto_Venta/src/Ventanas/Login.java</file>
-            <file>file:/C:/Users/Jecosvaz/Documents/NetBeansProjects/Punto_Venta/src/Ventanas/Altaproducto.java</file>
-            <file>file:/C:/Users/Jecosvaz/Documents/NetBeansProjects/Punto_Venta/src/Ventanas/Menu_de_opciones.java</file>
+            <file>file:/home/iocv/NetBeansProjects/Punto_venta_java/src/punto_venta/Principal.java</file>
+            <file>file:/home/iocv/NetBeansProjects/Punto_venta_java/src/Ventanas/AltaEmpleados.java</file>
+            <file>file:/home/iocv/NetBeansProjects/Punto_venta_java/src/Ventanas/Altaproducto.java</file>
+            <file>file:/home/iocv/NetBeansProjects/Punto_venta_java/src/Ventanas/Login.java</file>
+            <file>file:/home/iocv/NetBeansProjects/Punto_venta_java/src/Ventanas/Menu_de_opciones.java</file>
         </group>
     </open-files>
 </project-private>

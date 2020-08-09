@@ -5,17 +5,28 @@
  */
 package Ventanas;
 
-/**
- *
- * @author Jecosvaz
- */
+
+
+
+
 public class Menu_de_opciones extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Login
-     */
+    Altaproducto PanelAltaProducto;
+    AltaEmpleados PanelAltaEmpleados;
+
     public Menu_de_opciones() {
         initComponents();
+        setSize(755,620);
+        PanelAltaProducto = new Altaproducto();
+        PanelAltaProducto.setBounds(0,141,614,460);
+        add(PanelAltaProducto);
+        PanelAltaEmpleados = new AltaEmpleados();
+        PanelAltaEmpleados.setBounds(0,141,614,460);
+        add(PanelAltaEmpleados);
+        PanelAltaEmpleados.setVisible(false);
+        
+        
+        
     }
 
     /**
@@ -35,9 +46,12 @@ public class Menu_de_opciones extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(153, 153, 153));
+        setPreferredSize(new java.awt.Dimension(755, 620));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1059, 760));
+        jPanel1.setPreferredSize(new java.awt.Dimension(755, 140));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Btn_Producto.setBackground(new java.awt.Color(255, 255, 51));
@@ -48,41 +62,53 @@ public class Menu_de_opciones extends javax.swing.JFrame {
                 Btn_ProductoActionPerformed(evt);
             }
         });
-        jPanel1.add(Btn_Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 160, 90));
+        jPanel1.add(Btn_Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 190, -1));
 
         Btn_Cliente.setBackground(new java.awt.Color(51, 102, 255));
         Btn_Cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Cliente.png"))); // NOI18N
         Btn_Cliente.setText("Alta_cliente");
-        jPanel1.add(Btn_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 160, 90));
+        jPanel1.add(Btn_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, 60));
 
         Btn_Venta.setBackground(new java.awt.Color(237, 112, 82));
         Btn_Venta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Carrito 2.png"))); // NOI18N
         Btn_Venta.setText("Venta");
-        jPanel1.add(Btn_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 160, 90));
+        jPanel1.add(Btn_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 160, -1));
 
         Btn_Empleados.setBackground(new java.awt.Color(0, 204, 51));
         Btn_Empleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Maletin.png"))); // NOI18N
         Btn_Empleados.setText("Alta usuario");
-        jPanel1.add(Btn_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 160, 90));
+        Btn_Empleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_EmpleadosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Btn_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 40, 180, -1));
 
         jLabel1.setBackground(new java.awt.Color(237, 112, 82));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(237, 112, 82));
         jLabel1.setText("MENU DE OPCIONES");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 390));
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Btn_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ProductoActionPerformed
+        setSize(755,620);
+        PanelAltaProducto.setVisible(true);
+        PanelAltaEmpleados.setVisible(false);
        
-        Altaproducto verproducto = new Altaproducto();
-                verproducto.setVisible(true);
-                this.setVisible(false); 
+        
         
     }//GEN-LAST:event_Btn_ProductoActionPerformed
+
+    private void Btn_EmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_EmpleadosActionPerformed
+       setSize(755,620);
+       PanelAltaEmpleados.setVisible(true);
+       PanelAltaProducto.setVisible(false);
+    }//GEN-LAST:event_Btn_EmpleadosActionPerformed
 
     /**
      * @param args the command line arguments

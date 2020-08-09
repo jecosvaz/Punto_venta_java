@@ -60,44 +60,44 @@ public class Altaproducto extends javax.swing.JPanel {
 
         setMaximumSize(new java.awt.Dimension(34, 14));
         setMinimumSize(new java.awt.Dimension(34, 14));
-        setPreferredSize(new java.awt.Dimension(689, 460));
+        setPreferredSize(new java.awt.Dimension(614, 460));
         setRequestFocusEnabled(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Bt_Save_Produc.setText("Guardar producto");
-        add(Bt_Save_Produc, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, 30));
+        add(Bt_Save_Produc, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 99, 71));
         jLabel1.setText("Buscar, eliminar, modificar.");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, -1, -1));
 
         jT_Codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_CodigoActionPerformed(evt);
             }
         });
-        add(jT_Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 89, -1));
+        add(jT_Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 89, -1));
 
         jLabel3.setText("Nombre del producto");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, -1, -1));
 
         jT_NameProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_NameProductActionPerformed(evt);
             }
         });
-        add(jT_NameProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 201, 30));
+        add(jT_NameProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, 201, 30));
 
         jLabel4.setText("Precio");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 40, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 60, -1));
 
         jT_NameProduct1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_NameProduct1ActionPerformed(evt);
             }
         });
-        add(jT_NameProduct1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 75, -1));
+        add(jT_NameProduct1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 100, -1));
 
         jRadioButton1.setText("IVA");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,10 +105,10 @@ public class Altaproducto extends javax.swing.JPanel {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
+        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
 
         jLabel5.setText("Desea aplicar el IVA");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 160, 20));
 
         Bt_Modific_IVA.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         Bt_Modific_IVA.setText("Modificar IVA");
@@ -120,24 +120,24 @@ public class Altaproducto extends javax.swing.JPanel {
         add(Bt_Modific_IVA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 100, -1));
 
         jLabel6.setText("Total precio producto");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, -1, -1));
 
         jT_NameProduct2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_NameProduct2ActionPerformed(evt);
             }
         });
-        add(jT_NameProduct2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 79, -1));
+        add(jT_NameProduct2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 79, -1));
 
         jLabel7.setText("Cantidad");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, -1));
 
         jT_NameProduct3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_NameProduct3ActionPerformed(evt);
             }
         });
-        add(jT_NameProduct3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 65, -1));
+        add(jT_NameProduct3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 65, -1));
 
         jCoUnidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Piezas", "Cajas", "Kilogramos", "Paquetes" }));
         jCoUnidad.addActionListener(new java.awt.event.ActionListener() {
@@ -145,24 +145,24 @@ public class Altaproducto extends javax.swing.JPanel {
                 jCoUnidadActionPerformed(evt);
             }
         });
-        add(jCoUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, 86, -1));
+        add(jCoUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 86, -1));
 
         jLabel8.setText("Unidad");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, -1, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 690, 10));
 
         jLabel9.setText("Nombre del producto");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 150, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 150, -1));
 
         jT_NameProduct4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_NameProduct4ActionPerformed(evt);
             }
         });
-        add(jT_NameProduct4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 250, -1));
+        add(jT_NameProduct4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 250, -1));
 
         Bt_Delete.setText("Eliminar");
-        add(Bt_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+        add(Bt_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 430, -1, -1));
 
         Bt_Search.setText("Buscar");
         Bt_Search.addActionListener(new java.awt.event.ActionListener() {
@@ -170,28 +170,28 @@ public class Altaproducto extends javax.swing.JPanel {
                 Bt_SearchActionPerformed(evt);
             }
         });
-        add(Bt_Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, -1, -1));
+        add(Bt_Search, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
 
         Bt_Modificar.setText("Modificar");
-        add(Bt_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 430, -1, -1));
+        add(Bt_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
         jLabel11.setText("Codigo");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         jLabel12.setText("Codigo");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, -1, -1));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
         jT_Codigo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jT_Codigo1ActionPerformed(evt);
             }
         });
-        add(jT_Codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 89, -1));
+        add(jT_Codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 89, -1));
 
         jLabel13.setFont(new java.awt.Font("Franklin Gothic Demi", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 99, 71));
         jLabel13.setText("Registro de producto");
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
+        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -208,7 +208,7 @@ public class Altaproducto extends javax.swing.JPanel {
         jScrollPane2.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 570, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 570, 90));
 
         getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
