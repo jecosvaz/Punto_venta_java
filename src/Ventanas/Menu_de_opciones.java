@@ -13,17 +13,34 @@ public class Menu_de_opciones extends javax.swing.JFrame {
 
     Altaproducto PanelAltaProducto;
     AltaEmpleados PanelAltaEmpleados;
-
+    AltaClientes PanelAltaClientes;
+    Ventas PanelVentas;
+ 
     public Menu_de_opciones() {
         initComponents();
+        
+    //tamaño de la ventana jform
         setSize(755,620);
+    //Definicion de los jpane con las caracteristicas que se vana mostrar en el jform
+        //jpane ventas
+        PanelVentas = new Ventas();
+            PanelVentas.setBounds(0,141,614,460);
+                add(PanelVentas);
+        //jpane clientes
+        PanelAltaClientes = new AltaClientes();
+            PanelAltaClientes.setBounds(0,141,614,460);
+                add(PanelAltaClientes);
+                        PanelAltaClientes.setVisible(false);
+        //jpane productos
         PanelAltaProducto = new Altaproducto();
-        PanelAltaProducto.setBounds(0,141,614,460);
-        add(PanelAltaProducto);
+            PanelAltaProducto.setBounds(0,141,614,460);
+                add(PanelAltaProducto);
+                        PanelAltaProducto.setVisible(false);
+        //jpane empleados
         PanelAltaEmpleados = new AltaEmpleados();
-        PanelAltaEmpleados.setBounds(0,141,614,460);
-        add(PanelAltaEmpleados);
-        PanelAltaEmpleados.setVisible(false);
+            PanelAltaEmpleados.setBounds(0,141,614,460);
+                add(PanelAltaEmpleados);
+                        PanelAltaEmpleados.setVisible(false);
         
         
         
@@ -67,11 +84,21 @@ public class Menu_de_opciones extends javax.swing.JFrame {
         Btn_Cliente.setBackground(new java.awt.Color(51, 102, 255));
         Btn_Cliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Cliente.png"))); // NOI18N
         Btn_Cliente.setText("Alta_cliente");
+        Btn_Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_ClienteActionPerformed(evt);
+            }
+        });
         jPanel1.add(Btn_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, 60));
 
         Btn_Venta.setBackground(new java.awt.Color(237, 112, 82));
         Btn_Venta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Carrito 2.png"))); // NOI18N
         Btn_Venta.setText("Venta");
+        Btn_Venta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_VentaActionPerformed(evt);
+            }
+        });
         jPanel1.add(Btn_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 160, -1));
 
         Btn_Empleados.setBackground(new java.awt.Color(0, 204, 51));
@@ -97,8 +124,11 @@ public class Menu_de_opciones extends javax.swing.JFrame {
 
     private void Btn_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ProductoActionPerformed
         setSize(755,620);
+        PanelVentas.setVisible(false);
+        PanelAltaClientes.setVisible(false);
         PanelAltaProducto.setVisible(true);
         PanelAltaEmpleados.setVisible(false);
+        
        
         
         
@@ -106,9 +136,25 @@ public class Menu_de_opciones extends javax.swing.JFrame {
 
     private void Btn_EmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_EmpleadosActionPerformed
        setSize(755,620);
-       PanelAltaEmpleados.setVisible(true);
-       PanelAltaProducto.setVisible(false);
+       PanelVentas.setVisible(false);
+        PanelAltaClientes.setVisible(false);
+        PanelAltaProducto.setVisible(false);
+        PanelAltaEmpleados.setVisible(true);
     }//GEN-LAST:event_Btn_EmpleadosActionPerformed
+
+    private void Btn_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ClienteActionPerformed
+        PanelVentas.setVisible(false);
+        PanelAltaClientes.setVisible(true);
+        PanelAltaProducto.setVisible(false);
+        PanelAltaEmpleados.setVisible(false);
+    }//GEN-LAST:event_Btn_ClienteActionPerformed
+
+    private void Btn_VentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_VentaActionPerformed
+        PanelVentas.setVisible(true);
+        PanelAltaClientes.setVisible(false);
+        PanelAltaProducto.setVisible(false);
+        PanelAltaEmpleados.setVisible(false);
+    }//GEN-LAST:event_Btn_VentaActionPerformed
 
     /**
      * @param args the command line arguments
