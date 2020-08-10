@@ -90,6 +90,7 @@ public class Login extends javax.swing.JFrame {
         String user,contraseña;
          user = jTextUsuario.getText();
         contraseña = jTextPass.getText();
+        String Sql="SELEC * FORM usuario WHERE usuario='"+user+"'";
         if (user.equals("1010") && contraseña.equals("12345")){ 
                 Menu_de_opciones veropciones = new Menu_de_opciones();
                 veropciones.setVisible(true);
@@ -151,7 +152,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextPass;
-    private javax.swing.JTextField jTextUsuario;
+    private static javax.swing.JTextField jTextPass;
+    private static javax.swing.JTextField jTextUsuario;
     // End of variables declaration//GEN-END:variables
 }

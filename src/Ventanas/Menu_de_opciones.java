@@ -121,7 +121,7 @@ public class Menu_de_opciones extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    // boton de productos muestra jpane productos
     private void Btn_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ProductoActionPerformed
         setSize(755,620);
         PanelVentas.setVisible(false);
@@ -129,11 +129,8 @@ public class Menu_de_opciones extends javax.swing.JFrame {
         PanelAltaProducto.setVisible(true);
         PanelAltaEmpleados.setVisible(false);
         
-       
-        
-        
     }//GEN-LAST:event_Btn_ProductoActionPerformed
-
+    // boton de productos muestra jpane empleados
     private void Btn_EmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_EmpleadosActionPerformed
        setSize(755,620);
        PanelVentas.setVisible(false);
@@ -141,14 +138,14 @@ public class Menu_de_opciones extends javax.swing.JFrame {
         PanelAltaProducto.setVisible(false);
         PanelAltaEmpleados.setVisible(true);
     }//GEN-LAST:event_Btn_EmpleadosActionPerformed
-
+    // boton de productos muestra jpane clientes
     private void Btn_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ClienteActionPerformed
         PanelVentas.setVisible(false);
         PanelAltaClientes.setVisible(true);
         PanelAltaProducto.setVisible(false);
         PanelAltaEmpleados.setVisible(false);
     }//GEN-LAST:event_Btn_ClienteActionPerformed
-
+    // boton de productos muestra jpane ventas
     private void Btn_VentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_VentaActionPerformed
         PanelVentas.setVisible(true);
         PanelAltaClientes.setVisible(false);

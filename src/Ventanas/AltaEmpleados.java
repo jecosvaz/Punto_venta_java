@@ -6,6 +6,12 @@
 
 package Ventanas;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Tecno
@@ -33,16 +39,16 @@ public class AltaEmpleados extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jT_NameProduct = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jT_NameProduct1 = new javax.swing.JTextField();
+        jT_Direccion = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jT_NameProduct2 = new javax.swing.JTextField();
+        jT_Telefono = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jT_NameProduct3 = new javax.swing.JTextField();
+        jT_Edad = new javax.swing.JTextField();
         jCoPuesto = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
-        jT_NameProduct4 = new javax.swing.JTextField();
+        jT_Nombre = new javax.swing.JTextField();
         Bt_Delete = new javax.swing.JButton();
         Bt_Search = new javax.swing.JButton();
         Bt_Modificar = new javax.swing.JButton();
@@ -52,6 +58,10 @@ public class AltaEmpleados extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jPass2 = new javax.swing.JPasswordField();
+        jPass1 = new javax.swing.JPasswordField();
 
         jLabel10.setText("Codigo");
 
@@ -67,7 +77,7 @@ public class AltaEmpleados extends javax.swing.JPanel {
                 Bt_Save_ProducActionPerformed(evt);
             }
         });
-        add(Bt_Save_Produc, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, 30));
+        add(Bt_Save_Produc, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("Franklin Gothic Demi", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 99, 71));
@@ -92,34 +102,34 @@ public class AltaEmpleados extends javax.swing.JPanel {
         add(jT_NameProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 240, 30));
 
         jLabel4.setText("Direccion");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 70, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 70, -1));
 
-        jT_NameProduct1.addActionListener(new java.awt.event.ActionListener() {
+        jT_Direccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jT_NameProduct1ActionPerformed(evt);
+                jT_DireccionActionPerformed(evt);
             }
         });
-        add(jT_NameProduct1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 220, -1));
+        add(jT_Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 220, -1));
 
-        jLabel6.setText("Teléfono");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, -1, -1));
+        jLabel6.setText("Confirmar contraseña");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, -1, -1));
 
-        jT_NameProduct2.addActionListener(new java.awt.event.ActionListener() {
+        jT_Telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jT_NameProduct2ActionPerformed(evt);
+                jT_TelefonoActionPerformed(evt);
             }
         });
-        add(jT_NameProduct2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, 100, -1));
+        add(jT_Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 100, -1));
 
         jLabel7.setText("Edad");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, -1, -1));
 
-        jT_NameProduct3.addActionListener(new java.awt.event.ActionListener() {
+        jT_Edad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jT_NameProduct3ActionPerformed(evt);
+                jT_EdadActionPerformed(evt);
             }
         });
-        add(jT_NameProduct3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 65, -1));
+        add(jT_Edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 65, -1));
 
         jCoPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Empleado", "Supervisor", "Gerente", " " }));
         jCoPuesto.addActionListener(new java.awt.event.ActionListener() {
@@ -141,12 +151,12 @@ public class AltaEmpleados extends javax.swing.JPanel {
         jLabel9.setText("Nombre Completo");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 150, -1));
 
-        jT_NameProduct4.addActionListener(new java.awt.event.ActionListener() {
+        jT_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jT_NameProduct4ActionPerformed(evt);
+                jT_NombreActionPerformed(evt);
             }
         });
-        add(jT_NameProduct4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 250, -1));
+        add(jT_Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 250, -1));
 
         Bt_Delete.setText("Eliminar");
         add(Bt_Delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
@@ -197,6 +207,14 @@ public class AltaEmpleados extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 670, 90));
 
+        jLabel14.setText("Teléfono");
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, -1, -1));
+
+        jLabel15.setText("Contraseña");
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, -1, -1));
+        add(jPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 120, -1));
+        add(jPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 120, -1));
+
         getAccessibleContext().setAccessibleName("");
     }// </editor-fold>//GEN-END:initComponents
 
@@ -208,25 +226,25 @@ public class AltaEmpleados extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jT_NameProductActionPerformed
 
-    private void jT_NameProduct1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NameProduct1ActionPerformed
+    private void jT_DireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_DireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jT_NameProduct1ActionPerformed
+    }//GEN-LAST:event_jT_DireccionActionPerformed
 
-    private void jT_NameProduct2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NameProduct2ActionPerformed
+    private void jT_TelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_TelefonoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jT_NameProduct2ActionPerformed
+    }//GEN-LAST:event_jT_TelefonoActionPerformed
 
-    private void jT_NameProduct3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NameProduct3ActionPerformed
+    private void jT_EdadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_EdadActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jT_NameProduct3ActionPerformed
+    }//GEN-LAST:event_jT_EdadActionPerformed
 
     private void jCoPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCoPuestoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCoPuestoActionPerformed
 
-    private void jT_NameProduct4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NameProduct4ActionPerformed
+    private void jT_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_NombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jT_NameProduct4ActionPerformed
+    }//GEN-LAST:event_jT_NombreActionPerformed
 
     private void jT_Codigo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jT_Codigo1ActionPerformed
         // TODO add your handling code here:
@@ -241,7 +259,34 @@ public class AltaEmpleados extends javax.swing.JPanel {
     }//GEN-LAST:event_jCoPuestoPropertyChange
 
     private void Bt_Save_ProducActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bt_Save_ProducActionPerformed
-        // TODO add your handling code here:
+        
+             
+            ConexionBD conec = new ConexionBD();
+            
+        if (conec.getConexionBD()!=null){ 
+            
+            System.out.println("Conectado");
+            
+        }else{
+            System.out.println("Error en la conexion ");
+        
+        }
+            
+            
+            String nombre    = jT_Nombre.getText();
+            String pass1     = jPass1.getText();
+            String pass2     = jPass2.getText();
+            String edad      = jT_Edad.getText();
+            String cargo     = jCoPuesto.getToolTipText();
+            String direccion = jT_Direccion.getText();
+            String telefono  = jT_Telefono.getText();
+            
+            String query = "INSERT INTO Prueba(nombre, contrasena, Edad, Cargo, Direccion, Telefono) values ('"+nombre+"','"+pass1+"','"+edad+"','"+cargo+"','"+direccion+"','"+telefono+"')";
+            
+            System.out.println(nombre+""+pass1+"" +edad+""+cargo+""+direccion+""+telefono);
+            
+            
+        
     }//GEN-LAST:event_Bt_Save_ProducActionPerformed
 
 
@@ -256,21 +301,25 @@ public class AltaEmpleados extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPasswordField jPass1;
+    private javax.swing.JPasswordField jPass2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jT_Codigo;
     private javax.swing.JTextField jT_Codigo1;
+    private javax.swing.JTextField jT_Direccion;
+    private javax.swing.JTextField jT_Edad;
     private javax.swing.JTextField jT_NameProduct;
-    private javax.swing.JTextField jT_NameProduct1;
-    private javax.swing.JTextField jT_NameProduct2;
-    private javax.swing.JTextField jT_NameProduct3;
-    private javax.swing.JTextField jT_NameProduct4;
+    private javax.swing.JTextField jT_Nombre;
+    private javax.swing.JTextField jT_Telefono;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 
